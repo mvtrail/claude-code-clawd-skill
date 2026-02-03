@@ -49,6 +49,43 @@ Before using this skill, ensure you have:
 - `claude -c` - Continue most recent conversation in current directory
 - `claude commit` - Create descriptive Git commit message
 
+### OpenSpec-Enhanced Development
+
+#### Specification-Driven Workflow
+```bash
+# Step 1: Initialize OpenSpec project
+cd your-project
+/opsx:new fix-authentication-issues
+
+# Step 2: Generate comprehensive specifications
+/opsx:ff
+
+# Step 3: Review and refine specifications
+# - Edit proposal.md for problem analysis
+# - Edit requirements.md for functional specs
+# - Edit design.md for technical approach
+# - Edit tasks.md for implementation plan
+
+# Step 4: Execute specification-driven development
+/opsx:apply
+# Claude Code will now work from the detailed specifications
+
+# Step 5: Archive completed project
+/opsx:archive
+```
+
+#### Claude Code + OpenSpec Integration
+```bash
+# Use Claude Code within OpenSpec context
+claude "Implement authentication module according to openspec/changes/fix-authentication-issues/requirements.md and design.md"
+
+# Claude Code will:
+# 1. Read the OpenSpec specifications first
+# 2. Understand requirements and design constraints
+# 3. Implement according to the defined acceptance criteria
+# 4. Update task progress in tasks.md
+```
+
 ### Common Development Tasks
 
 **Code Generation & Modification**
@@ -170,6 +207,42 @@ claude --verbose          # Show detailed output
 claude mcp list           # List configured MCP servers
 ```
 
+## OpenSpec Integration
+
+This skill now includes comprehensive OpenSpec methodology integration for structured, specification-driven development:
+
+### OpenSpec Methodology
+- **Documentation**: See `OPENSPEC_METHODOLOGY.md` for complete methodology
+- **Workflow**: Plan-first, documentation-driven development
+- **Best Practices**: Task-oriented, acceptance-driven approach
+
+### Key OpenSpec Commands
+```bash
+# Initialize specification-driven project
+/opsx:new feature-name
+
+# Generate planning documents  
+/opsx:ff
+
+# Execute task list
+/opsx:apply
+
+# Archive completed project
+/opsx:archive
+```
+
+### Core Principles
+1. **Plan First**: Complete specifications before coding
+2. **Documentation-Driven**: Documents guide development
+3. **Task-Oriented**: Break large features into manageable tasks
+4. **Acceptance-Driven**: Clear, testable completion criteria
+
+### Integration Benefits
+- Improved predictability and control
+- Enhanced code quality through design-first approach
+- Better team collaboration with shared understanding
+- Complete knowledge capture for future maintenance
+
 ## Resources
 
 - [Official Documentation](https://code.claude.com/docs/)
@@ -177,6 +250,7 @@ claude mcp list           # List configured MCP servers
 - [CLI Reference](https://code.claude.com/docs/en/cli-reference)
 - [MCP Documentation](https://code.claude.com/docs/en/mcp)
 - [Skills Documentation](https://code.claude.com/docs/en/skills)
+- [OpenSpec Project](https://github.com/Fission-AI/OpenSpec)
 
 ## License
 
