@@ -55,7 +55,7 @@ Before using this skill, ensure you have:
 ```bash
 # Step 1: Initialize OpenSpec project
 cd your-project
-/opsx:new fix-authentication-issues
+/opsx:new [task description]
 
 # Step 2: Generate comprehensive specifications
 /opsx:ff
